@@ -16,15 +16,15 @@
 
 .app-header {
   color: rgb(216, 10, 164);
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
   transform: translatey(0px);
   animation: float 4s ease-in-out infinite;
 }
@@ -40,5 +40,20 @@
 
   100% {
     transform: translatey(0px);
+  }
+}
+
+.app-description {
+  font-family: arial black;
+  background-image: linear-gradient(to right, rgb(255, 0, 234), rgb(163, 121, 177), rgb(241, 231, 240), indigo, violet);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 250s linear infinite;
+}
+
+@keyframes move {
+  to {
+    background-position: 4500vh;
   }
 }
