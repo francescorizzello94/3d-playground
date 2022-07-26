@@ -1,5 +1,14 @@
+import { Canvas } from "@react-three/fiber"
+
 export const Geometry = () => { 
   return (
-    <h1>Geometry</h1>
+    <Canvas>
+    {/* <h1>Geometry</h1> */}
+    <pointLight position={[10, 10, 10]} />
+    <mesh>
+      <sphereBufferGeometry />
+      <meshStandardMaterial color="hotpink" />
+    </mesh>
+  </Canvas>
   )
 }
