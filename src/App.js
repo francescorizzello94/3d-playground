@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './Pages/HomePage';
 import { Geometry } from './Pages/Geometry';
 import { VisualEffects } from './Pages/VisualEffects';
@@ -14,9 +14,11 @@ function App() {
         about the outside world!
       </p>
       </div>
+      <Routes>
       <Route path='/' component={ Home} />
       <Route path='/Geometry' component={ Geometry} />
-      <Route path='/VisualEffects' component={ VisualEffects} />
+        <Route path='/VisualEffects' component={VisualEffects} />
+      </Routes>
     </BrowserRouter>
   );
 }
