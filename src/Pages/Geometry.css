@@ -1,0 +1,35 @@
+:root {
+  --align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: var(--align);
+}
+
+#description {
+  text-align: var(--align);
+}
+
+#return {
+  font-size: x-small;
+  margin-top: .5rem;
+}
+
+footer {
+  display: flex;
+  flex-shrink: 0;
+}
