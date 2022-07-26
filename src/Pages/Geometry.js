@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 export const Geometry = () => { 
   return (
     <div class="wrapper-geometry">
-      <h1>Geometry</h1>
+      <h1 class="geometry-header">Geometry</h1>
       <div class="description-geometry">
         Explore the realm of geometry
         <br />

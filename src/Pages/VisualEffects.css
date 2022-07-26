@@ -16,7 +16,7 @@
   background: linear-gradient(#e915bb, #040d85);
 }
 
-h1 {
+.header-effects {
   text-align: var(--align);
 }
 

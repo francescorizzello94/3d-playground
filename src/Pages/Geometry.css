@@ -16,8 +16,11 @@
   background: linear-gradient(#e66465, #9198e5);
 }
 
-h1 {
+.geometry-header {
   text-align: var(--align);
+  margin-top: 2rem;
+  transform: translatey(0px);
+  animation: float 10s ease-in-out infinite;
 }
 
 .description-geometry {
