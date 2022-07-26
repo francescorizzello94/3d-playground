@@ -14,6 +14,10 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg,
+      rgb(242, 250, 174) 20%,
+      rgb(135, 224, 210) 50%,
+      rgb(225, 252, 249) 75%);
 }
 
 h1 {
