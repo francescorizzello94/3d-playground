@@ -13,8 +13,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
-        <Route path='/Geometry' element={Geometry} />
-        <Route path='/VisualEffects' element={VisualEffects} />
+        <Route path='/Geometry' element={<Geometry />} />
+        <Route path='/VisualEffects' element={<VisualEffects />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
