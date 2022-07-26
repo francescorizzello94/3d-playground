@@ -1,4 +1,5 @@
 import './App.css';
+import { Link } from 'react-router-dom';
 
 
 function App() {
@@ -9,6 +10,10 @@ function App() {
         Pick a playground and forget
         about the outside world!
       </p>
+      <nav>
+        <Link to="/Geometry">Geometry</Link> | { " "}
+        <Link to="/VisualEffects">Visual Effects</Link>
+      </nav>
       </div>
 
   );
