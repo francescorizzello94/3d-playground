@@ -1,16 +1,17 @@
+import './Geometry.css'
 import { Canvas } from "@react-three/fiber"
 import App from "../App"
 import { Link } from "react-router-dom"
-import './Geometry.css'
+
 
 export const Geometry = () => { 
   return (
-    <div>
+    <div class="wrapper-geometry">
       <h1>Geometry</h1>
-      <div id="description">
+      <div class="description-geometry">
         Explore the realm of geometry
         <br />
-        <nav id="return">
+        <nav class="return-geometry">
           <Link to="/"> HomePage</Link>
         </nav>
       </div>

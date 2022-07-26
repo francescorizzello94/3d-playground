@@ -8,8 +8,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+.wrapper-effects {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,11 +19,11 @@ h1 {
   text-align: var(--align);
 }
 
-#description {
+.description-effects {
   text-align: var(--align);
 }
 
-#return {
+.return-effects {
   font-size: x-small;
   margin-top: .5rem;
 }
