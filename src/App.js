@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -11,6 +11,9 @@ function App() {
         about the outside world!
       </p>
       </div>
+      <Route path='/' component={ } />
+      <Route path='/Geometry' component={ } />
+      <Route path='/VisualEffects' component={ } />
     </BrowserRouter>
   );
 }
