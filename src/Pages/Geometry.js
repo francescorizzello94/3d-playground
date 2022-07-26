@@ -1,5 +1,6 @@
 import { Canvas } from "@react-three/fiber"
 import App from "../App"
+import { Link } from "react-router-dom"
 import './Geometry.css'
 
 export const Geometry = () => { 
@@ -9,7 +10,9 @@ export const Geometry = () => {
       <div id="description">
         Explore the realm of geometry
         <br />
-        <p id="return">HomePage</p>
+        <nav id="return">
+          <Link to="/"> HomePage</Link>
+        </nav>
       </div>
     </div>
   )
