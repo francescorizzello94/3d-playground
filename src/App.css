@@ -8,9 +8,8 @@
   background: linear-gradient(90deg,
       rgba(255, 113, 206, 1) 15%,
       rgba(1, 205, 254, 1) 15%,
-      rgba(5, 255, 61, 1) 5%,
       rgba(185, 103, 255, 1) 10%,
-      rgba(255, 251, 150) 35%);
+      rgb(228, 231, 212) 35%);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -20,13 +19,15 @@
     0 0 7px #fff,
     0 0 10px #fff,
     0 0 21px #fff,
-    0 0 42px #0fa,
-    0 0 82px #0fa,
-    0 0 92px #0fa,
-    0 0 102px #0fa,
-    0 0 151px #0fa;
+    0 0 42px rgb(219, 247, 237),
+    0 0 82px rgb(235, 49, 204),
+    0 0 92px rgb(221, 125, 221),
+    0 0 102px rgb(160, 43, 144),
+    0 0 151px rgba(199, 118, 195, 0.61);
   transform: translatey(0px);
   animation: float 4s ease-in-out infinite;
+  margin-left: 12rem;
+  font-style: italic;
 }
 
 @keyframes float {
@@ -44,16 +45,29 @@
 }
 
 .app-description {
-  font-family: arial black;
-  background-image: linear-gradient(to right, rgb(255, 0, 234), rgb(163, 121, 177), rgb(241, 231, 240), indigo, violet);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif black;
+  font-style: italic;
+  font-size: x-large;
+  background-image: linear-gradient(to right, rgb(218, 30, 202), rgb(52, 8, 66), rgb(13, 138, 138), violet);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: move 250s linear infinite;
+  padding-top: 2.5rem;
+  margin-left: 12rem;
 }
 
 @keyframes move {
   to {
     background-position: 4500vh;
   }
+}
+
+.app-nav {
+  padding-top: 2.5rem;
+  margin-left: 14rem;
+}
+.app-nav a {
+  font-size: 1.2rem;
+  text-decoration: none;
 }
