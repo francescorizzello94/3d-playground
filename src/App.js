@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function App() {
   return (
     <div className="wrapper">
-      <h1>3D Playground</h1>
+      <h1 class="app-header">3D Playground</h1>
       <p>
         Pick a playground and forget
         about the outside world!
