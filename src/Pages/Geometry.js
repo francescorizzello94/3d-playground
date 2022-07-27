@@ -17,14 +17,14 @@ export const Geometry = () => {
         </nav>
         <nav className="geometry-menu">
           <a href="#geo-cube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
-          <a href="#geo-sphere-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
+          <a href="#geo-twocube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
         </nav>
         <div className="geometry-icons-wrapper">
           <section id="geo-cube-icon">
-            <BoxApp />
-          </section>
-          <section id="geo-sphere-icon">
             <NintendoCube />
+          </section>
+          <section id="geo-twocube-icon">
+            <BoxApp />
           </section>
         </div>
       </div>
