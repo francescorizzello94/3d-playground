@@ -1,5 +1,6 @@
 import './Geometry.css'
 import BoxApp from '../Components/Geometry/BoxApp'
+import NintendoCube from '../Components/Geometry/NintendoCube'
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
@@ -23,7 +24,7 @@ export const Geometry = () => {
             <BoxApp />
           </section>
           <section id="geo-sphere-icon">
-            <h1>Display Sphere</h1>
+            <NintendoCube />
           </section>
         </div>
       </div>
