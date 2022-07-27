@@ -19,6 +19,7 @@ export const Geometry = () => {
           <Link to="/">Home</Link>
           <a href="#geo-cube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#geo-twocube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
+          <a href="#geo-controlcube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
         </nav>
         <div className="geometry-icons-wrapper">
           <section id="geo-cube-icon">
@@ -26,6 +27,9 @@ export const Geometry = () => {
           </section>
           <section id="geo-twocube-icon">
             <BoxApp />
+          </section>
+          <section id="geo-controlcube-icon">
+
           </section>
         </div>
       </div>

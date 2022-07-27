@@ -27,23 +27,18 @@
   text-align: var(--align);
 }
 
-.return-geometry {
-  font-size: x-small;
-  margin-top: .5rem;
-}
 
 .geometry-icons-wrapper {
   background: #191919;
-  min-height: 100vh;
+  max-height: 100vh;
   font-family: Montserrat, sans-serif;
 }
 
 .geometry-menu a {
-  font-size: 40px;
+  font-size: 2rem;
   color: #fff;
   text-decoration: none;
-  padding: 20px;
-  text-align: center;
+  padding: 1rem;
 }
 
 .geometry-menu {
@@ -53,14 +48,14 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  height: 100vh;
-  background: #422C73;
+  max-height: 100vh;
+  background: #e22ab4;
 }
 
 #geo-cube-icon {
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 50vh;
   width: 0;
   opacity: 0;
   transition: all ease-in .5s;
@@ -72,7 +67,7 @@
 #geo-twocube-icon {
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 50vh;
   width: 0;
   opacity: 0;
   transition: all ease-in .5s;
@@ -81,19 +76,6 @@
   align-items: center;
 }
 
-#geo-cube-icon h1 {
-  color: #fff;
-  font-size: 50px;
-  text-transform: uppercase;
-  opacity: 0;
-}
-
-#geo-twocube-icon h1 {
-  color: #fff;
-  font-size: 50px;
-  text-transform: uppercase;
-  opacity: 0;
-}
 
 #geo-cube-icon:target {
   opacity: 1;
