@@ -13,9 +13,10 @@ export const Geometry = () => {
         Explore the realm of geometry
         <br />
         <nav className="return-geometry">
-          <Link to="/"> HomePage</Link>
+          
         </nav>
         <nav className="geometry-menu">
+          <Link to="/">Home</Link>
           <a href="#geo-cube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#geo-twocube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
         </nav>
