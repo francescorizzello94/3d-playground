@@ -1,6 +1,7 @@
 import './Geometry.css'
 import { useRef, useState } from 'react'
-import { Canvas, useFrame, boxBufferGeometry, meshPhongMaterial } from "@react-three/fiber"
+import { Canvas, useFrame, boxBufferGeometry, meshPhongMaterial, OrbitControls } from "@react-three/fiber"
+import * as dat from 'dat.gui'
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
