@@ -3,9 +3,9 @@ import { Canvas } from "@react-three/fiber"
 import App from "../App"
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
 
-export const Geometry = () => { 
+export const Geometry = () => {
   return (
     <div className="wrapper-geometry">
       <h1 className="geometry-header">Geometry</h1>
@@ -15,10 +15,19 @@ export const Geometry = () => {
         <nav className="return-geometry">
           <Link to="/"> HomePage</Link>
         </nav>
+        <br/>
         <nav className="geometry-menu">
-          <a href=".cube"><FontAwesomeIcon icon={faArrowCircleRight } /></a>
-          <a href=".sphere"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
+          <a href="#geo-cube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
+          <a href="#geo-sphere-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
         </nav>
+        <div className="geometry-icons-wrapper">
+          <section id="geo-cube-icon">
+            <h1>Display Cube</h1>
+          </section>
+          <section id="geo-sphere-icon">
+            <h1>Display Sphere</h1>
+          </section>
+        </div>
       </div>
     </div>
   )

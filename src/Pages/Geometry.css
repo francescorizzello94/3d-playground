@@ -31,3 +31,100 @@
   font-size: x-small;
   margin-top: .5rem;
 }
+
+.geometry-icons-wrapper {
+  background: #191919;
+  min-height: 100vh;
+  font-family: Montserrat, sans-serif;
+}
+
+.geometry-menu a {
+  font-size: 40px;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.geometry-menu {
+  position: fixed;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100vh;
+  background: #422C73;
+}
+
+#geo-cube-icon {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 0;
+  opacity: 0;
+  transition: all ease-in .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#geo-sphere-icon {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 0;
+  opacity: 0;
+  transition: all ease-in .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#geo-cube-icon h1 {
+  color: #fff;
+  font-size: 50px;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+#geo-sphere-icon h1 {
+  color: #fff;
+  font-size: 50px;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+#geo-cube-icon:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#geo-sphere-icon:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#geo-cube-icon:target h1 {
+  opacity: 0;
+  animation: 2s fadeIn forwards .5s;
+}
+
+#geo-sphere-icon:target h1 {
+  opacity: 0;
+  animation: 2s fadeIn forwards .5s;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1
+  }
+}
