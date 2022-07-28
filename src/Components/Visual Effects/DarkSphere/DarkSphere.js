@@ -8,12 +8,13 @@ import thirdPicture from './assets/3.jpg'
 import fourthPicture from './assets/4.jpg'
 import fifthPicture from './assets/5.jpg'
 import sixthPicture from './assets/6.jpg'
+import seventhPicture from './assets/Sun.jpg'
 
 RectAreaLightUniformsLib.init()
 
 function Earth() {
   const ref = useRef()
-  const [texture, bump, moon] = useLoader(THREE.TextureLoader, [sixthPicture, secondPicture, thirdPicture])
+  const [texture, bump, moon] = useLoader(THREE.TextureLoader, [sixthPicture, secondPicture, seventhPicture])
   useFrame(({ clock }) => (ref.current.rotation.x = ref.current.rotation.y = ref.current.rotation.z = Math.cos(clock.getElapsedTime() / 8) * Math.PI))
   return (
     <group ref={ref}>
