@@ -1,9 +1,9 @@
 import "./VisualEffects.css"
-import { Canvas } from "@react-three/fiber"
-import App from "../App"
 import { Link } from "react-router-dom"
+import ExportVisual from "../Components/Visual Effects/Blobs"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
+import { EarthApp } from "../Components/Visual Effects/EarthSpin/EarthSpin"
 
 export const VisualEffects = () => {
   return (
@@ -18,6 +18,14 @@ export const VisualEffects = () => {
           <a href="#secondvisual-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#thirdvisual-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
         </nav>
+        <div className="geometry-icons-wrapper">
+          <section id="firstvisual-icon">
+            < ExportVisual />
+          </section>
+          <section id="secondvisual-icon">
+            < EarthApp />
+          </section>
+        </div>
       </div>
     </div>
   )

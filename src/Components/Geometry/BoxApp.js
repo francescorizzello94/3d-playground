@@ -1,8 +1,6 @@
-import * as THREE from 'three'
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useState } from 'react'
 import { Canvas, useFrame } from "@react-three/fiber"
-import { OrbitControls } from '@react-three/drei'
-import * as dat from 'dat.gui'
+
 
 function Box(props) {
 
