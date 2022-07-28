@@ -26,18 +26,21 @@ export default function ManipulateSingleCubeApp() {
           onChange={(e) => setPosition({ ...position, x: e.target.value })}
           value={position.x}
           type="number"
+          className="singlecube-input"
         />
         <label>y</label>
         <input
           onChange={(e) => setPosition({ ...position, y: e.target.value })}
           value={position.y}
           type="number"
+          className="singlecube-input"
         />
         <label>z</label>
         <input
           onChange={(e) => setPosition({ ...position, z: e.target.value })}
           value={position.z}
           type="number"
+          className="singlecube-input"
         />
       </div>
       <Canvas>
