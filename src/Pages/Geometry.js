@@ -1,7 +1,7 @@
 import './Geometry.css'
 import BoxApp from '../Components/Geometry/BoxApp'
 import NintendoCube from '../Components/Geometry/NintendoCube'
-import ThreeCubesApp from '../Components/Geometry/InteractiveRect'
+import ThreeInteractiveBoxes from '../Components/Geometry/InteractiveRect'
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
@@ -30,7 +30,7 @@ export const Geometry = () => {
             <BoxApp />
           </section>
           <section id="geo-controlrect-icon">
-            <ThreeCubesApp />
+            <ThreeInteractiveBoxes />
           </section>
         </div>
       </div>

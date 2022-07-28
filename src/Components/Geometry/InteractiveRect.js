@@ -42,14 +42,14 @@ export default function ThreeCubesApp() {
 
   return (
     <>
-      <Canvas>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <ThreeInteractiveBoxes position={[-2, 0, 0]} speed={rotateSpeed} />
-        <ThreeInteractiveBoxes position={[0, 0, 0]} speed={rotateSpeed} />
-        <ThreeInteractiveBoxes position={[2, 0, 0]} speed={rotateSpeed} />
-      </Canvas>
-      <Controls />
+        <Canvas>
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <ThreeInteractiveBoxes position={[-2, 0, 0]} speed={rotateSpeed} />
+          <ThreeInteractiveBoxes position={[0, 0, 0]} speed={rotateSpeed} />
+          <ThreeInteractiveBoxes position={[2, 0, 0]} speed={rotateSpeed} />
+        </Canvas>
+        <Controls />
     </>
   );
 }

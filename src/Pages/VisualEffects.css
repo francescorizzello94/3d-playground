@@ -24,7 +24,111 @@
   text-align: var(--align);
 }
 
-.return-effects {
-  font-size: x-small;
-  margin-top: .5rem;
+.geometry-icons-wrapper {
+  background: #191919;
+  max-height: 100vh;
+  font-family: Montserrat, sans-serif;
+}
+
+.visualeffects-menu a {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.visualeffects-menu {
+  position: fixed;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  max-height: 100vh;
+  background: #e22ab4;
+}
+
+#firstvisual-icon {
+  position: absolute;
+  top: 0;
+  height: 50vh;
+  width: 0;
+  opacity: 0;
+  transition: all ease-in .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#secondvisual-icon {
+  position: absolute;
+  top: 0;
+  height: 50vh;
+  width: 0;
+  opacity: 0;
+  transition: all ease-in .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#thirdvisual-icon {
+  position: absolute;
+  top: 0;
+  height: 50vh;
+  width: 0;
+  opacity: 0;
+  transition: all ease-in .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#firstvisual-icon:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#secondvisual-icon:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#thirdvisual-icon:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#firstvisual-icon:target h1 {
+  opacity: 0;
+  animation: 2s fadeIn forwards .5s;
+}
+
+#secondvisual-icon:target h1 {
+  opacity: 0;
+  animation: 2s fadeIn forwards .5s;
+}
+
+#thirdvisual-icon:target h1 {
+  opacity: 0;
+  animation: 2s fadeIn forwards .5s;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1
+  }
 }
