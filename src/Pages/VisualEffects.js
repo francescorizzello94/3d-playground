@@ -4,6 +4,7 @@ import ExportVisual from "../Components/Visual Effects/Blobs"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
 import { EarthApp } from "../Components/Visual Effects/EarthSpin/EarthSpin"
+import { DarkEarthApp } from "../Components/Visual Effects/DarkSphere/DarkSphere"
 
 export const VisualEffects = () => {
   return (
@@ -24,6 +25,9 @@ export const VisualEffects = () => {
           </section>
           <section id="secondvisual-icon">
             < EarthApp />
+          </section>
+          <section id="thirdvisual-icon">
+            <DarkEarthApp />
           </section>
         </div>
       </div>
