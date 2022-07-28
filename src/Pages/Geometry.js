@@ -5,6 +5,7 @@ import ThreeInteractiveBoxes from '../Components/Geometry/InteractiveRect'
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
+import ManipulateSingleCubeApp from '../Components/Geometry/ManipulateCube'
 
 export const Geometry = () => {
   return (
@@ -21,6 +22,7 @@ export const Geometry = () => {
           <a href="#geo-cube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#geo-twocube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#geo-controlrect-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
+          <a href="#geo-controlsinglerect-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
         </nav>
         <div className="geometry-icons-wrapper">
           <section id="geo-cube-icon">
@@ -30,6 +32,9 @@ export const Geometry = () => {
             <BoxApp />
           </section>
           <section id="geo-controlrect-icon">
+            <ManipulateSingleCubeApp />
+          </section>
+          <section id="geo-controlsinglerect-icon">
             <ThreeInteractiveBoxes />
           </section>
         </div>

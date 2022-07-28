@@ -76,6 +76,25 @@
   align-items: center;
 }
 
+#geo-controlsinglerect-icon {
+  position: absolute;
+  top: 0;
+  height: 50vh;
+  width: 0;
+  opacity: 0;
+  transition: all ease-in .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-top: 30rem;
+}
+
 #geo-controlrect-icon {
   position: absolute;
   top: 0;
@@ -107,6 +126,15 @@
   z-index: 10;
 }
 
+#geo-controlsinglerect-icon:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
 #geo-controlrect-icon:target {
   opacity: 1;
   position: absolute;
@@ -122,6 +150,11 @@
 }
 
 #geo-twocube-icon:target h1 {
+  opacity: 0;
+  animation: 2s fadeIn forwards .5s;
+}
+
+#geo-controlsinglerect-icon:target h1 {
   opacity: 0;
   animation: 2s fadeIn forwards .5s;
 }
