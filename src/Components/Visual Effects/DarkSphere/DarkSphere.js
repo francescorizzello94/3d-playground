@@ -13,7 +13,7 @@ RectAreaLightUniformsLib.init()
 
 function Earth() {
   const ref = useRef()
-  const [texture, bump, moon] = useLoader(THREE.TextureLoader, [firstPicture, secondPicture, thirdPicture])
+  const [texture, bump, moon] = useLoader(THREE.TextureLoader, [sixthPicture, secondPicture, thirdPicture])
   useFrame(({ clock }) => (ref.current.rotation.x = ref.current.rotation.y = ref.current.rotation.z = Math.cos(clock.getElapsedTime() / 8) * Math.PI))
   return (
     <group ref={ref}>
