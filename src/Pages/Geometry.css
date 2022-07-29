@@ -29,14 +29,14 @@
 
 
 .geometry-icons-wrapper {
-  background: #191919;
+  background: #000000;
   max-height: 100vh;
   font-family: Montserrat, sans-serif;
 }
 
 .geometry-menu a {
   font-size: 2rem;
-  color: #fff;
+  color: rgb(3, 0, 0);
   text-decoration: none;
   padding: 1rem;
 }
