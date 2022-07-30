@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import {GUI} from 'dat.gui';
 
 const InteractiveRectangle = () => {
 
@@ -13,10 +14,12 @@ const InteractiveRectangle = () => {
 
     renderer.setSize(window.innerWidth, window.innerHeight);
     mountRef.current.appendChild(renderer.domElement);
+    
 
     let geometry = new THREE.BoxGeometry(1, 1, 1);
     let material = new THREE.MeshBasicMaterial({ color: 0x0000FF, wireframe: true });
     let cube = new THREE.Mesh(geometry, material);
+    
 
     scene.add(cube);
     camera.position.z = 5;
