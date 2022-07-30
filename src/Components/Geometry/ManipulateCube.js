@@ -28,7 +28,6 @@ export default function ManipulateSingleCubeApp() {
           type="range"
           min='-5'
           max='5'
-          className="singlecube-input"
         />
         <label>y</label>
         <input
@@ -37,7 +36,6 @@ export default function ManipulateSingleCubeApp() {
           type="range"
           min='-5'
           max='5'
-          className="singlecube-input"
         />
         <label>z</label>
         <input
@@ -46,7 +44,6 @@ export default function ManipulateSingleCubeApp() {
           type="range"
           min='-5'
           max='5'
-          className="singlecube-input"
         />
       </div>
       <Canvas>

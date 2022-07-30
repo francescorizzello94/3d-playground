@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
 import ManipulateSingleCubeApp from '../Components/Geometry/ManipulateCube'
-import InteractiveRectangle from '../Components/Geometry/InteractiveRectangle'
+import TorusKnot from '../Components/Geometry/TorusKnot'
 
 export const Geometry = () => {
   return (
@@ -40,7 +40,7 @@ export const Geometry = () => {
             <ThreeInteractiveBoxes />
           </section>
           <section id="geo-twocubesapp-icon">
-            <InteractiveRectangle />
+            <TorusKnot />
           </section>
         </div>
       </div>

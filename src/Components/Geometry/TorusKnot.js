@@ -3,16 +3,16 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 
-class InteractiveRectangle extends Component {
+class TorusKnot extends Component {
   componentDidMount() {
     this.scene = new THREE.Scene();
     this.renderer = new THREE.WebGLRenderer({ alpha: true});
-    this.renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+    this.renderer.setSize(window.innerWidth / 4, window.innerHeight / 4);
     this.mount.appendChild(this.renderer.domElement);
     this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
     this.camera.position.z = 5;
-    let geometry = new THREE.BoxBufferGeometry(1, 1, 1);
-    let material = new THREE.MeshBasicMaterial({ color: 0x0014a8, wireframe: true });
+    let geometry = new THREE.TorusKnotBufferGeometry(10, 3, 100, 16);
+    let material = new THREE.MeshBasicMaterial({ color: 0xffff00, wireframe: true });
     this.cube = new THREE.Mesh(geometry, material);
     this.scene.add(this.cube);
     this.animation();
@@ -46,4 +46,4 @@ class InteractiveRectangle extends Component {
   }
 }
 
-export default InteractiveRectangle;
+export default TorusKnot;
