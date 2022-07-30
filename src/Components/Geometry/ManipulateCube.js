@@ -25,21 +25,27 @@ export default function ManipulateSingleCubeApp() {
         <input
           onChange={(e) => setPosition({ ...position, x: e.target.value })}
           value={position.x}
-          type="number"
+          type="range"
+          min='-5'
+          max='5'
           className="singlecube-input"
         />
         <label>y</label>
         <input
           onChange={(e) => setPosition({ ...position, y: e.target.value })}
           value={position.y}
-          type="number"
+          type="range"
+          min='-5'
+          max='5'
           className="singlecube-input"
         />
         <label>z</label>
         <input
           onChange={(e) => setPosition({ ...position, z: e.target.value })}
           value={position.z}
-          type="number"
+          type="range"
+          min='-5'
+          max='5'
           className="singlecube-input"
         />
       </div>
