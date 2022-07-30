@@ -6,11 +6,18 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@pmndrs/branding": "^0.0.8",
+    "@react-three/cannon": "^6.3.0",
     "@react-three/fiber": "^8.2.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "babel-plugin-glsl": "^1.0.0",
+    "component-material": "^1.0.7",
     "dat.gui": "^0.7.9",
+    "glsl-noise-simplex": "^0.0.2",
+    "lamina": "^1.1.20",
+    "nice-color-palettes": "^3.0.0",
     "react": "^18.2.0",
     "react-dat-gui": "^4.1.1",
     "react-dom": "^18.2.0",
@@ -19,6 +26,8 @@
     "react-spring": "^9.5.2",
     "react-three-gui": "^0.4.2",
     "three": "^0.142.0",
+    "tweakpane": "^1.6.1",
+    "use-tweaks": "^0.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/three": "^0.143.0"
   }
 }

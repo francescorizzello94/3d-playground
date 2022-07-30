@@ -112,6 +112,18 @@
   align-items: center;
 }
 
+#geo-twocubesapp-icon {
+  position: absolute;
+  top: 0;
+  height: 50vh;
+  width: 0;
+  opacity: 0;
+  transition: all ease-in .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 #geo-cube-icon:target {
   opacity: 1;
@@ -149,6 +161,15 @@
   z-index: 10;
 }
 
+#geo-twocubesapp-icon:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
 #geo-cube-icon:target h1 {
   opacity: 0;
   animation: 2s fadeIn forwards .5s;
@@ -165,6 +186,11 @@
 }
 
 #geo-controlrect-icon:target h1 {
+  opacity: 0;
+  animation: 2s fadeIn forwards .5s;
+}
+
+#geo-twocubesapp-icon:target h1 {
   opacity: 0;
   animation: 2s fadeIn forwards .5s;
 }

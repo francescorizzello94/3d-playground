@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
 import { EarthApp } from "../Components/Visual Effects/EarthSpin/EarthSpin"
 import { DarkEarthApp } from "../Components/Visual Effects/DarkSphere/DarkSphere"
+import { ManyBlobsApp } from "../Components/Visual Effects/BlobsTwo"
 
 export const VisualEffects = () => {
   return (
@@ -18,6 +19,7 @@ export const VisualEffects = () => {
           <a href="#firstvisual-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#secondvisual-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#thirdvisual-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
+          <a href="#fourthvisual-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
         </nav>
         <div className="geometry-icons-wrapper">
           <section id="firstvisual-icon">
@@ -28,6 +30,9 @@ export const VisualEffects = () => {
           </section>
           <section id="thirdvisual-icon">
             <DarkEarthApp />
+          </section>
+          <section id="fourthvisual-icon">
+            <ManyBlobsApp />
           </section>
         </div>
       </div>

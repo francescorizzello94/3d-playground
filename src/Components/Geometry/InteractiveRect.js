@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react';
+import { useControls } from 'leva';
+import { useRef, useState, useMemo } from 'react';
 import { useFrame } from 'react-three-fiber';
 import { Canvas } from 'react-three-fiber';
 import { Controls, useControl } from 'react-three-gui';

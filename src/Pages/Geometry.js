@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
 import ManipulateSingleCubeApp from '../Components/Geometry/ManipulateCube'
+// import TwoCubesApp from '../Components/Geometry/TwoCubeControl'
 
 export const Geometry = () => {
   return (
@@ -23,6 +24,7 @@ export const Geometry = () => {
           <a href="#geo-twocube-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#geo-controlrect-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#geo-controlsinglerect-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
+          <a href="#geo-twocubesapp-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
         </nav>
         <div className="geometry-icons-wrapper">
           <section id="geo-cube-icon">
