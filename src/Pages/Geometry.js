@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
 import ManipulateSingleCubeApp from '../Components/Geometry/ManipulateCube'
-// import TwoCubesApp from '../Components/Geometry/TwoCubeControl'
+import InteractiveRectangle from '../Components/Geometry/InteractiveRectangle'
 
 export const Geometry = () => {
   return (
@@ -38,6 +38,9 @@ export const Geometry = () => {
           </section>
           <section id="geo-controlsinglerect-icon">
             <ThreeInteractiveBoxes />
+          </section>
+          <section id="geo-twocubesapp-icon">
+            <InteractiveRectangle />
           </section>
         </div>
       </div>
