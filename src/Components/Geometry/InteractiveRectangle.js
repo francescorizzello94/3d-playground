@@ -1,54 +1,49 @@
-import { useEffect, useRef } from "react";
-import * as THREE from "three";
-import {GUI} from 'dat.gui';
+import { Component } from "react";
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-const InteractiveRectangle = () => {
 
-  const mountRef = useRef(null);
+class InteractiveRectangle extends Component {
+  componentDidMount() {
+    this.scene = new THREE.Scene();
+    this.renderer = new THREE.WebGLRenderer({ alpha: true});
+    this.renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+    this.mount.appendChild(this.renderer.domElement);
+    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+    this.camera.position.z = 5;
+    let geometry = new THREE.BoxBufferGeometry(1, 1, 1);
+    let material = new THREE.MeshBasicMaterial({ color: 0x0014a8, wireframe: true });
+    this.cube = new THREE.Mesh(geometry, material);
+    this.scene.add(this.cube);
+    this.animation();
+    this.renderer.render(this.scene, this.camera);
+    new OrbitControls(this.camera, this.renderer.domElement);
+    window.addEventListener('resize', this.handleWindowResize);
+  }
 
-  useEffect(() => {
+  animation = () => {
+    requestAnimationFrame(this.animation);
+    this.cube.rotation.x += 0.01;
+    this.cube.rotation.y += 0.01;
+    this.renderer.render(this.scene, this.camera);
+  }
 
-    let scene = new THREE.Scene();
-    let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    let renderer = new THREE.WebGLRenderer({alpha: true});
+  handleWindowResize = () => {
+    this.camera.aspect = window.innerWidth / window.innerHeight;
+    this.camera.updateProjectionMatrix();
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.render(this.scene, this.camera);
+  }
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current.appendChild(renderer.domElement);
-    
-
-    let geometry = new THREE.BoxGeometry(1, 1, 1);
-    let material = new THREE.MeshBasicMaterial({ color: 0x0000FF, wireframe: true });
-    let cube = new THREE.Mesh(geometry, material);
-    
-
-    scene.add(cube);
-    camera.position.z = 5;
-
-    let animate = function () {
-      requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    };
-
-    let onWindowResize = function () {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    };
-
-    window.addEventListener("resize", onWindowResize, false);
-
-    animate();
-
-    return () => mountRef.current.removeChild(renderer.domElement);
-  }, []);
-
-  return (
-    <div ref={mountRef}>
-
-    </div>
-  );
+  render() {
+    return (
+      <div
+        ref={mount => {
+          this.mount = mount;
+        }}
+      />
+    )
+  }
 }
 
 export default InteractiveRectangle;
