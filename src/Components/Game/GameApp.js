@@ -6,7 +6,7 @@ import TargetImg from '../Game/target.png'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { TextureLoader } from "three";
 import { RecoilRoot, useRecoilState, useRecoilValue } from 'recoil';
-import { shipPositionState, laserPositionState } from './gameState';
+import { shipPositionState, laserPositionState, enemyPositionState } from './gameState';
 
 extend({ OrbitControls });
 
@@ -188,6 +188,20 @@ function LaserController() {
   );
 }
 
+function Enemies() {
+  const enemies = useRecoilValue(enemyPositionState);
+  return (
+    <group>
+      {enemies.map((enemy) => (
+        <mesh position={[enemy.x, enemy.y, enemy.z]} key={`${enemy.x}`}>
+          <sphereBufferGeometry attach="geometry" args={[2, 8, 8]} />
+          <meshStandardMaterial attach="material" color="white" wireframe />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
 export const GameApp = () => {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
@@ -200,6 +214,7 @@ export const GameApp = () => {
           <ArWing />
         </Suspense>
           <Target />
+          <Enemies />
           <Lasers />
           <Terrain />
           <LaserController />
