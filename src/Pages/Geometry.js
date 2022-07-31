@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
 import ManipulateSingleCubeApp from '../Components/Geometry/ManipulateCube'
 import TorusKnot from '../Components/Geometry/TorusKnot'
+import PhysicsApp from '../Components/Geometry/Physics'
 
 export const Geometry = () => {
   return (
@@ -25,6 +26,7 @@ export const Geometry = () => {
           <a href="#geo-controlrect-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#geo-controlsinglerect-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
           <a href="#geo-twocubesapp-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
+          <a href="#geo-physicsapp-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
         </nav>
         <div className="geometry-icons-wrapper">
           <section id="geo-cube-icon">
@@ -41,6 +43,9 @@ export const Geometry = () => {
           </section>
           <section id="geo-twocubesapp-icon">
             <TorusKnot />
+          </section>
+          <section id="geo-physicsapp-icon">
+            <PhysicsApp />
           </section>
         </div>
       </div>
