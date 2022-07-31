@@ -1,7 +1,10 @@
 import { Suspense, useRef } from "react";
-import { Canvas, useLoader, useFrame } from "react-three-fiber";
+import { Canvas, useLoader, useFrame, useThree, extend } from "react-three-fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Wing from '../Game/arwing.glb';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+
+extend({ OrbitControls });
 
 function Loading() {
   return (
@@ -39,10 +42,21 @@ function ArWing() {
   );
 }
 
+const CameraControls = () => { 
+  const {
+    camera,
+    gl: { domElement },
+  } = useThree();
+  const controls = useRef();
+  useFrame((state) => controls.current.update());
+  return <orbitControls ref={controls} args={[camera, domElement]} />
+}
+
 export const GameApp = () => {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <Canvas style={{ background: "#171717" }}>
+        <CameraControls />
         <directionalLight intensity={0.5} />
         <Suspense fallback={<Loading />}>
           <ArWing />

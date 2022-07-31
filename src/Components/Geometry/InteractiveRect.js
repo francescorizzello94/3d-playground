@@ -53,7 +53,7 @@ function ItemFast({ id }) {
   )
 }
 
-function ThreeInteractiveBoxes() {
+function MorphingBoxes() {
   const ref = useRef()
   const boxes = useStore(state => state.boxes)
   const amount = useControl('Amount️', { type: 'select', items: [20, 100, 200, 500, 1000, 2000] })
@@ -72,7 +72,6 @@ function ThreeInteractiveBoxes() {
       let delta = (Date.now() - lastCalledTime) / 1000
       lastCalledTime = Date.now()
       fps = 1 / delta
-      // Change state every frame
       api.getState().advance()
       frame = requestAnimationFrame(renderLoop)
     }
@@ -102,4 +101,4 @@ class ErrorBoundaries extends React.Component {
 
 
 
-export default ThreeInteractiveBoxes;
+export default MorphingBoxes;

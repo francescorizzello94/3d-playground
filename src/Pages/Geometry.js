@@ -1,7 +1,7 @@
 import './Geometry.css'
 import BoxApp from '../Components/Geometry/BoxApp'
 import NintendoCube from '../Components/Geometry/NintendoCube'
-import ThreeInteractiveBoxes from '../Components/Geometry/InteractiveRect'
+import MorphingBoxes from '../Components/Geometry/InteractiveRect'
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
@@ -37,7 +37,7 @@ export const Geometry = () => {
             <ManipulateSingleCubeApp />
           </section>
           <section id="geo-controlsinglerect-icon">
-            <ThreeInteractiveBoxes />
+            <MorphingBoxes />
           </section>
           <section id="geo-twocubesapp-icon">
             <TorusKnot />
