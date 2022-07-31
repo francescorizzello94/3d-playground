@@ -6,7 +6,7 @@ import TargetImg from '../Game/target.png'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { TextureLoader } from "three";
 import { RecoilRoot, useRecoilState, useRecoilValue } from 'recoil';
-import { shipPositionState, laserPositionState, enemyPositionState } from './gameState';
+import { shipPositionState, laserPositionState, enemyPositionState, scoreState } from './gameState';
 
 extend({ OrbitControls });
 
@@ -60,9 +60,9 @@ function ArWing() {
 
   //const group = useRef();
   const { nodes } = useLoader(GLTFLoader, Wing);
- /*  useFrame(() => {
-    group.current.rotation.y += 0.004;
-  }); */
+  /*  useFrame(() => {
+     group.current.rotation.y += 0.004;
+   }); */
   return (
     <group ref={ship}>
       <mesh visible geometry={nodes.Default.geometry}>
@@ -121,7 +121,7 @@ function Terrain() {
   )
 }
 
-function Target() { 
+function Target() {
   const rearTarget = useRef();
   const frontTarget = useRef();
   const loader = new TextureLoader();
@@ -145,7 +145,7 @@ function Target() {
   );
 }
 
-function Lasers() { 
+function Lasers() {
   const lasers = useRecoilValue(laserPositionState);
   return (
     <group>
@@ -159,7 +159,7 @@ function Lasers() {
   );
 }
 
-function LaserController() { 
+function LaserController() {
   const shipPosition = useRecoilValue(shipPositionState);
   const [lasers, setLasers] = useRecoilState(laserPositionState);
   return (
@@ -206,22 +206,70 @@ function Enemies() {
   );
 }
 
+function distance(p1, p2) {
+  const a = p2.x - p1.x;
+  const b = p2.y - p1.y;
+  const c = p2.z - p1.z;
+
+  return Math.sqrt(a * a + b * b + c * c);
+}
+
+function GameTimer() {
+  const [enemies, setEnemies] = useRecoilState(enemyPositionState);
+  const [lasers, setLaserPositions] = useRecoilState(laserPositionState);
+  const [score, setScore] = useRecoilState(scoreState);
+
+  useFrame(({ mouse }) => {
+    const hitEnemies = enemies
+      ? enemies.map(
+        (enemy) =>
+          lasers.filter(
+            (laser) =>
+              lasers.filter((laser) => distance(laser, enemy) < 3).length > 0
+          ).length > 0
+      )
+      : [];
+
+    if (hitEnemies.includes(true) && enemies.length > 0) {
+      setScore(score + hitEnemies.filter((hit) => hit).length);
+    }
+    setEnemies(
+      enemies
+        .map((enemy) => ({ x: enemy.x, y: enemy.y, z: enemy.z + ENEMY_SPEED }))
+        .filter((enemy, idx) => !hitEnemies[idx] && enemy.z < 0)
+    );
+    setLaserPositions(
+      lasers
+        .map((laser) => ({
+          id: laser.id,
+          x: laser.x + laser.velocity[0],
+          y: laser.y + laser.velocity[1],
+          z: laser.z - LASER_Z_VELOCITY,
+          velocity: laser.velocity,
+        }))
+        .filter((laser) => laser.z > -LASER_RANGE && laser.y > GROUND_HEIGHT)
+    );
+  });
+  return null;
+}
+
 export const GameApp = () => {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <Canvas style={{ background: "black" }}>
         <RecoilRoot>
-        <CameraControls />
-        <directionalLight intensity={1} />
-        <ambientLight intensity={0.1} />
-        <Suspense fallback={<Loading />}>
-          <ArWing />
-        </Suspense>
+          <CameraControls />
+          <directionalLight intensity={1} />
+          <ambientLight intensity={0.1} />
+          <Suspense fallback={<Loading />}>
+            <ArWing />
+          </Suspense>
           <Target />
           <Enemies />
           <Lasers />
           <Terrain />
           <LaserController />
+          <GameTimer />
         </RecoilRoot>
       </Canvas>
     </div>
