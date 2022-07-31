@@ -235,7 +235,12 @@ function GameTimer() {
     }
     setEnemies(
       enemies
-        .map((enemy) => ({ x: enemy.x, y: enemy.y, z: enemy.z + ENEMY_SPEED }))
+        .map((enemy) => (
+          {
+            x: enemy.x,
+            y: enemy.y,
+            z: enemy.z + ENEMY_SPEED
+          }))
         .filter((enemy, idx) => !hitEnemies[idx] && enemy.z < 0)
     );
     setLaserPositions(

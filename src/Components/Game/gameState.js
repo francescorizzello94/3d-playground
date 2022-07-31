@@ -20,6 +20,16 @@ export const enemyPositionState = atom({
       x: 20,
       y: 0,
       z: -100
+    },
+    {
+      x: 40,
+      y: 20,
+      z: -80
+    },
+    {
+      x: 20,
+      y: 40,
+      z: -100
     }
   ]
 });
