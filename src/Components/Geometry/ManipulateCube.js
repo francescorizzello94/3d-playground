@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "react-three-fiber";
 import * as THREE from "three";
-import { Box } from "@react-three/drei";
+import { Dodecahedron } from "@react-three/drei";
 
 
 const Scene = ({ x, y, z }) => {
@@ -9,9 +9,9 @@ const Scene = ({ x, y, z }) => {
   const vec = new THREE.Vector3(x, y, z);
   useFrame(() => box.current.position.lerp(vec, 0.1));
   return (
-    <Box ref={box}>
-      <meshLambertMaterial attach="material" color="white" />
-    </Box>
+    <Dodecahedron ref={box}>
+      <meshLambertMaterial attach="material" color="magenta" />
+    </Dodecahedron>
   );
 };
 
@@ -47,7 +47,7 @@ export default function ManipulateSingleCubeApp() {
         />
       </div>
       <Canvas>
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={0.2} />
         <Scene x={x} y={y} z={z} />
       </Canvas>
     </>
