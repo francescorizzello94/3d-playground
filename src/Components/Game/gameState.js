@@ -27,4 +27,9 @@ export const enemyPositionState = atom({
 export const laserPositionState = atom({
   key: "laserPositions",
   default: []
-})
+});
+
+export const scoreState = atom({
+  key: "score",
+  default: 0
+});
