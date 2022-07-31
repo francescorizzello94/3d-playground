@@ -11,6 +11,10 @@ import { shipPositionState, laserPositionState, enemyPositionState } from './gam
 extend({ OrbitControls });
 
 const GROUND_HEIGHT = -50;
+const LASER_RANGE = 100;
+const LASER_Z_VELOCITY = 1;
+const ENEMY_SPEED = 0.1;
+
 
 function Loading() {
   return (
