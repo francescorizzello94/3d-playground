@@ -2,7 +2,10 @@ import { Suspense, useRef, useState } from "react";
 import { Canvas, useLoader, useFrame, useThree, extend } from "react-three-fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Wing from '../Game/arwing.glb';
+import TargetImg from '../Game/target.png'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { TextureLoader } from "three";
+import {RecoilRoot} from 'recoil';
 
 extend({ OrbitControls });
 
@@ -113,17 +116,44 @@ function Terrain() {
   )
 }
 
+function Target() { 
+  const rearTarget = useRef();
+  const frontTarget = useRef();
+  const loader = new TextureLoader();
+  const texture = loader.load(TargetImg);
+  useFrame(({ mouse }) => {
+    rearTarget.current.position.y = -mouse.y * 10;
+    rearTarget.current.position.x = -mouse.x * 30;
+
+    frontTarget.current.position.y = -mouse.y * 20;
+    frontTarget.current.position.x = -mouse.x * 60;
+  });
+  return (
+    <group>
+      <sprite position={[0, 0, -8]} ref={rearTarget}>
+        <spriteMaterial attach="material" map={texture} />
+      </sprite>
+      <sprite position={[0, 0, -16]} ref={frontTarget}>
+        <spriteMaterial attach="material" map={texture} />
+      </sprite>
+    </group>
+  );
+}
+
 export const GameApp = () => {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <Canvas style={{ background: "black" }}>
+        <RecoilRoot>
         <CameraControls />
-        <directionalLight intensity={0.5} />
+        <directionalLight intensity={1} />
         <ambientLight intensity={0.1} />
         <Suspense fallback={<Loading />}>
           <ArWing />
         </Suspense>
+        <Target />
         <Terrain />
+        </RecoilRoot>
       </Canvas>
     </div>
   );
