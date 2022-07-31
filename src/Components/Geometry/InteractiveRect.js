@@ -81,7 +81,7 @@ function ThreeInteractiveBoxes() {
   }, [amount, concurrent, transient])
 
   return (
-    <div class="main" style={{ background: transient || concurrent ? '#272737' : 'transparent' }}>
+    <div class="main" style={{ background: transient || concurrent ? '#272737' : 'transparent', width: "70vw", height: "70vh" }}>
       <Canvas >
         <ErrorBoundaries>
           {boxes.map(id => (

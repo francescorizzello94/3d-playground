@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Geometry} from './Pages/Geometry';
 import { VisualEffects } from './Pages/VisualEffects';
+import { GameApp } from './Components/Game/GameApp';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -15,6 +16,7 @@ root.render(
         <Route path='/' element={<App />} />
         <Route path='/Geometry' element={<Geometry />} />
         <Route path='/VisualEffects' element={<VisualEffects />} />
+        <Route path='/Game' element={ <GameApp />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

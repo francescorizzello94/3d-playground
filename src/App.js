@@ -12,7 +12,8 @@ function App() {
       </p>
       <nav class="app-nav">
         <Link to="/Geometry">Geometry</Link> | { ""}
-        <Link to="/VisualEffects">Visual Effects</Link>
+        <Link to="/VisualEffects">Visual Effects</Link> | {""}
+        <Link to="/Game">Videogame</Link>
       </nav>
       </div>
 
