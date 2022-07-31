@@ -155,6 +155,39 @@ function Lasers() {
   );
 }
 
+function LaserController() { 
+  const shipPosition = useRecoilValue(shipPositionState);
+  const [lasers, setLasers] = useRecoilState(laserPositionState);
+  return (
+    <mesh
+      position={[0, 0, -8]}
+      onClick={() =>
+        setLasers([
+          ...lasers,
+          {
+            id: Math.random(),
+            x: 0,
+            y: 0,
+            z: 0,
+            velocity: [
+              shipPosition.rotation.x * 6,
+              shipPosition.rotation.y * 5,
+            ],
+          },
+        ])
+      }
+    >
+      <planeBufferGeometry attach="geometry" args={[100, 100]} />
+      <meshStandardMaterial
+        attach="material"
+        color="orange"
+        emissive="#ff0860"
+        visible={false}
+      />
+    </mesh>
+  );
+}
+
 export const GameApp = () => {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
@@ -168,7 +201,8 @@ export const GameApp = () => {
         </Suspense>
           <Target />
           <Lasers />
-        <Terrain />
+          <Terrain />
+          <LaserController />
         </RecoilRoot>
       </Canvas>
     </div>
