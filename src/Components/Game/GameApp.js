@@ -5,7 +5,8 @@ import Wing from '../Game/arwing.glb';
 import TargetImg from '../Game/target.png'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { TextureLoader } from "three";
-import {RecoilRoot} from 'recoil';
+import { RecoilRoot, useRecoilState, useRecoilValue } from 'recoil';
+import { shipPositionState, laserPositionState } from './gameState';
 
 extend({ OrbitControls });
 
@@ -28,7 +29,7 @@ function Loading() {
 }
 
 function ArWing() {
-  const [shipPosition, setShipPosition] = useState();
+  const [shipPosition, setShipPosition] = useRecoilState(shipPositionState);
 
   const ship = useRef();
   useFrame(({ mouse }) => {
@@ -140,6 +141,20 @@ function Target() {
   );
 }
 
+function Lasers() { 
+  const lasers = useRecoilValue(laserPositionState);
+  return (
+    <group>
+      {lasers.map((laser) => (
+        <mesh position={[laser.x, laser.y, laser.z]} key={`${laser.id}`}>
+          <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+          <meshStandardMaterial attach="material" emissive="white" wireframe />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
 export const GameApp = () => {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
@@ -151,7 +166,8 @@ export const GameApp = () => {
         <Suspense fallback={<Loading />}>
           <ArWing />
         </Suspense>
-        <Target />
+          <Target />
+          <Lasers />
         <Terrain />
         </RecoilRoot>
       </Canvas>
