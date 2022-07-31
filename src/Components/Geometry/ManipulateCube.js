@@ -10,7 +10,7 @@ const Scene = ({ x, y, z }) => {
   useFrame(() => box.current.position.lerp(vec, 0.1));
   return (
     <Dodecahedron ref={box}>
-      <meshLambertMaterial attach="material" color="magenta" />
+      <meshLambertMaterial attach="material" color="magenta" wireframe/>
     </Dodecahedron>
   );
 };
