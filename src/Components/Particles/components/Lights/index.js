@@ -4,8 +4,8 @@ export default () => {
   const FakeSphere = () => {
     return (
       <mesh>
-        <sphereBufferGeometry args={[0.7, 30, 30]} attach="geometry" />
-        <meshBasicMaterial color={0xfff1ef} attach="material" />
+        <sphereBufferGeometry args={[1.2, 30, 30]} attach="geometry" />
+        <meshBasicMaterial color={0x4468d4} attach="material" wireframe/>
       </mesh>
     );
   };
