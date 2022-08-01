@@ -20,10 +20,11 @@ function Box(props) {
       onClick={e => setActive(!active)}
       onPointerOver={e => setHover(true)}
       onPointerOut={e => setHover(false)}>
-      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+      <octahedronBufferGeometry attach="geometry" args={[1, 1, 1]} />
       <meshStandardMaterial
         attach="material"
-        color={hovered ? 'hotpink' : 'orange'}
+        color={hovered ? 'white' : 'black'}
+        wireframe
       />
     </mesh>
   );
