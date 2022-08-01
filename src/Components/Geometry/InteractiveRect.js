@@ -35,7 +35,7 @@ function ItemSlow({ id }) {
   return (
     <mesh rotation={coords}>
       <boxBufferGeometry args={[2, 2, 2]} attach="geometry" />
-      <meshNormalMaterial attach="material" />
+      <meshNormalMaterial attach="material" wireframe />
     </mesh>
   )
 }
@@ -48,7 +48,7 @@ function ItemFast({ id }) {
   return (
     <mesh ref={mesh}>
       <boxBufferGeometry args={[2, 2, 2]} attach="geometry" />
-      <meshNormalMaterial attach="material" />
+      <meshNormalMaterial attach="material" wireframe/>
     </mesh>
   )
 }
