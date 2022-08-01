@@ -11,8 +11,8 @@ class TorusKnot extends Component {
     this.mount.appendChild(this.renderer.domElement);
     this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
     this.camera.position.z = 5;
-    let geometry = new THREE.TorusKnotBufferGeometry(10, 3, 100, 16);
-    let material = new THREE.MeshBasicMaterial({ color: 0xffff00, wireframe: true });
+    const geometry = new THREE.TorusKnotBufferGeometry(10, 3, 100, 16);
+    const material = new THREE.MeshBasicMaterial({ color: 0xffff00, wireframe: true });
     this.cube = new THREE.Mesh(geometry, material);
     this.scene.add(this.cube);
     this.animation();

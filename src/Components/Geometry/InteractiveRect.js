@@ -19,7 +19,7 @@ const [useStore, api] = create(set => ({
   advance(state) {
     set(state => {
       const coords = {}
-      for (let i = 0; i < state.boxes.length; i++) {
+      for (let i = 0, len = state.boxes.length; i < len; i++) {
         const id = state.boxes[i]
         const [x, y, z] = state.coords[id]
         coords[id] = [x + 0.01, y + 0.01, z + 0.01]
