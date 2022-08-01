@@ -103,7 +103,7 @@
 .controls {
   display: flex;
   flex-direction: column;
-  margin-left: 2rem;
+  margin-left: 10rem;
   margin-top: 30rem;
 }
 

@@ -16,7 +16,7 @@ root.render(
         <Route path='/' element={<App />} />
         <Route path='/Geometry' element={<Geometry />} />
         <Route path='/VisualEffects' element={<VisualEffects />} />
-        <Route path='/Game' element={ <GameApp />} />
+        <Route path='/Game' element={<GameApp />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
