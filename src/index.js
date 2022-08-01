@@ -17,7 +17,7 @@ root.render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/Geometry' element={<Geometry />} />
-        <Route path='/VisualEffects' element={<VisualEffects />} />
+        <Route path='/Aesthetics' element={<VisualEffects />} />
         <Route path='/Game' element={<GameApp />} />
         <Route path='/MeditationField' element={<ParticleApp />} />
       </Routes>

@@ -12,7 +12,7 @@ function App() {
       </p>
       <nav class="app-nav">
         <Link to="/Geometry">Geometry</Link> | { ""}
-        <Link to="/VisualEffects">Visual Effects</Link> | {""}
+        <Link to="/Aesthetics">Aesthetics</Link> | {""}
         <Link to="/Game">Videogame</Link> | {""}
         <Link to="/MeditationField">Meditation Field</Link>
       </nav>

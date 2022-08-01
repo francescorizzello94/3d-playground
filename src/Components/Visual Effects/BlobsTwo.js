@@ -28,7 +28,6 @@ function InstancedSpheres({ count = 200 }) {
   }))
   const colorArray = useMemo(() => Float32Array.from(new Array(count).fill().flatMap((_, i) => tempColor.set(data[i].color).toArray())), [count])
   useLayoutEffect(() => {
-    // Cannon does not support variable size for instances (yet), so this is something that's exclusive to react
     for (let i = 0; i < count; i++) api.at(i).scaleOverride([data[i].scale, data[i].scale, data[i].scale])
   }, [])
   return (
