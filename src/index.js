@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Geometry} from './Pages/Geometry';
 import { VisualEffects } from './Pages/VisualEffects';
 import { GameApp } from './Components/Game/GameApp';
+import { ParticleApp } from './Components/Particles/Particles';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -17,6 +19,7 @@ root.render(
         <Route path='/Geometry' element={<Geometry />} />
         <Route path='/VisualEffects' element={<VisualEffects />} />
         <Route path='/Game' element={<GameApp />} />
+        <Route path='/MeditationField' element={<ParticleApp />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

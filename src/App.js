@@ -14,7 +14,7 @@ function App() {
         <Link to="/Geometry">Geometry</Link> | { ""}
         <Link to="/VisualEffects">Visual Effects</Link> | {""}
         <Link to="/Game">Videogame</Link> | {""}
-        <Link to="/Avatar">3D Avatar</Link>
+        <Link to="/MeditationField">Meditation Field</Link>
       </nav>
       </div>
 
