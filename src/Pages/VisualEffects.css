@@ -18,6 +18,9 @@
 
 .header-effects {
   text-align: var(--align);
+  margin-top: 2rem;
+  transform: translatey(0px);
+  animation: float 10s ease-in-out infinite;
 }
 
 .description-effects {

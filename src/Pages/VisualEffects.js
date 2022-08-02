@@ -10,7 +10,7 @@ import { ManyBlobsApp } from "../Components/Visual Effects/BlobsTwo"
 export const VisualEffects = () => {
   return (
     <div class="wrapper-effects">
-      <h1 class="header-effects">Visual Effects</h1>
+      <h1 class="header-effects">Aesthetics</h1>
       <div class="description-effects">
         Let the visions take you far away
         <br />
