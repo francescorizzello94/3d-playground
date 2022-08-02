@@ -2,7 +2,10 @@ import "./VisualEffects.css"
 import { Link } from "react-router-dom"
 import ExportVisual from "../Components/Visual Effects/Blobs"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons/faArrowCircleRight'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe'
+import { faStar } from '@fortawesome/free-solid-svg-icons/faStar'
+import { faAsterisk } from '@fortawesome/free-solid-svg-icons/faAsterisk'
+import { faRainbow } from '@fortawesome/free-solid-svg-icons/faRainbow'
 import { EarthApp } from "../Components/Visual Effects/EarthSpin/EarthSpin"
 import { DarkEarthApp } from "../Components/Visual Effects/DarkSphere/DarkSphere"
 import { ManyBlobsApp } from "../Components/Visual Effects/BlobsTwo"
@@ -16,10 +19,10 @@ export const VisualEffects = () => {
         <br />
         <nav class="visualeffects-menu">
           <Link to="/">Home</Link>
-          <a href="#firstvisual-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
-          <a href="#secondvisual-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
-          <a href="#thirdvisual-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
-          <a href="#fourthvisual-icon"><FontAwesomeIcon icon={faArrowCircleRight} /></a>
+          <a href="#firstvisual-icon"><FontAwesomeIcon icon={faAsterisk} /></a>
+          <a href="#secondvisual-icon"><FontAwesomeIcon icon={faGlobe} /></a>
+          <a href="#thirdvisual-icon"><FontAwesomeIcon icon={faStar} /></a>
+          <a href="#fourthvisual-icon"><FontAwesomeIcon icon={faRainbow} /></a>
         </nav>
         <div className="geometry-icons-wrapper">
           <section id="firstvisual-icon">
