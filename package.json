@@ -8,6 +8,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@pmndrs/branding": "^0.0.8",
     "@react-three/cannon": "^6.3.0",
+    "@react-three/drei": "^9.19.5",
     "@react-three/fiber": "^8.2.1",
     "@react-three/flex": "^1.0.0",
     "@testing-library/jest-dom": "^5.16.4",
