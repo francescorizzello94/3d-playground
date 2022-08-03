@@ -64,16 +64,20 @@
     <img src="public/screenshots/landing.gif" alt="Logo" width="460" height="260">
   </a>
   </div>
+  
+  <h2 align="center"> Geometry </h2>
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The <i>Geometry</i> playground focuses on the geometrical shape and structure of objects, as well as interactivity; wireframe is used for several animations to provide a more three-dimensional experience, as you can see in the first animation below.<br />Interaction with objects occurs through typical events such as click or mouseover (as in the second animation below), as well as with slider controls.
 
 <div align="center">
-    <img src="public/screenshots/geometry0.gif" alt="Logo" width="360" height="260">
+    <img src="public/screenshots/geometry0.gif" alt="Logo" width="460" height="260">
   </a>
   </div>
   
+  <br />
+  
   <div align="center">
-    <img src="public/screenshots/geometry1.gif" alt="Logo" width="360" height="260">
+    <img src="public/screenshots/geometry1.gif" alt="Logo" width="460" height="260">
   </a>
   </div>
 
