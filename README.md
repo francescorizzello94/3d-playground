@@ -98,8 +98,8 @@ https://user-images.githubusercontent.com/63818980/182714509-54092982-0797-4862-
     <img src="public/screenshots/videogame.png" alt="Logo" width="460" height="260">
   </a>
   </div>
-  
-This very simple game inspired by the following tutorial is a simple videoludic addition to add a more dynamic component to an otherwise relaxed atmosphere.
+  <br />
+This very simple game inspired by the <a href="https://www.youtube.com/watch?v=ADBnmJ1Z_18&ab_channel=CodeWorkshop"> following tutorial </a> is a simple videoludic addition to add a more dynamic component to an otherwise relaxed atmosphere.
 I mainly used it to learn about the Recoil library and understand how I may implement state management for future videogame projects.
 
 Here's why:
