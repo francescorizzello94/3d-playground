@@ -80,6 +80,17 @@ The <i>Geometry</i> playground focuses on the geometrical shape and structure of
     <img src="public/screenshots/geometry1.gif" alt="Logo" width="460" height="260">
   </a>
   </div>
+  
+  <h2 align="center"> Aesthetics </h2>
+  
+ <br />
+ 
+The <i>Aesthetics</i> playground offers pure bliss in the form of impressive animations and vaporwave color gradients.<br />
+Find the best example of this in the video below:
+
+https://user-images.githubusercontent.com/63818980/182714509-54092982-0797-4862-8cf6-b102d29b7399.mp4
+
+
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
