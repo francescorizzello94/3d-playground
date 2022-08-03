@@ -90,7 +90,17 @@ Find the best example of this in the video below:
 
 https://user-images.githubusercontent.com/63818980/182714509-54092982-0797-4862-8cf6-b102d29b7399.mp4
 
+<h2 align="center"> Videogame </h2>
 
+<br />
+
+ <div align="center">
+    <img src="public/screenshots/videogame.png" alt="Logo" width="460" height="260">
+  </a>
+  </div>
+  
+This very simple game inspired by the following tutorial is a simple videoludic addition to add a more dynamic component to an otherwise relaxed atmosphere.
+I mainly used it to learn about the Recoil library and understand how I may implement state management for future videogame projects.
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
