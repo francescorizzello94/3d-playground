@@ -61,11 +61,21 @@
 ## About The Project
 
 <div align="center">
-    <img src="public/screenshots/landing.gif" alt="Logo" width="280" height="260">
+    <img src="public/screenshots/landing.gif" alt="Logo" width="460" height="260">
   </a>
   </div>
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+
+<div align="center">
+    <img src="public/screenshots/geometry0.gif" alt="Logo" width="360" height="260">
+  </a>
+  </div>
+  
+  <div align="center">
+    <img src="public/screenshots/geometry1.gif" alt="Logo" width="360" height="260">
+  </a>
+  </div>
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
